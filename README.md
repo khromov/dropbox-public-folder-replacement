@@ -30,7 +30,7 @@ This script is tailored to run on most conventional web hosts that support a mod
 
 ### Setup
 
-Download the latest release version [here](). If you don't download the release version you will need to install dependencies via Composer.
+Download the latest release version [here](https://github.com/khromov/dropbox-public-folder-replacement/releases/download/1.0/dropbox-public-folder.zip). If you don't download the release version you will need to install dependencies via Composer.
 
 #### Setting up your Dropbox app
 
