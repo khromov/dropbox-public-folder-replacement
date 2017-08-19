@@ -60,6 +60,7 @@ Generating OAuth token
     * `appKey` = App key
     * `appSecret` = App secret
     * `accessToken` = Generated access token
+* Move or copy your files from the `Public` folder to the `Apps/Public folder replacement` folder. 
 
 #### Web server: Apache
 
