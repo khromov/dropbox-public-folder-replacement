@@ -44,6 +44,14 @@ we will create a special "App folder", and move our files from the Public folder
 * You will be redirected to the app info page. Write down the `App key` and `App secret`
 * In the Oauth2 section, click the "Generate" button and write down the `Generated access token`
 
+![2017-08-19 02_21_44-developers - dropbox](https://user-images.githubusercontent.com/1207507/29482018-4c7952a0-8489-11e7-82da-25d49e30fe34.png)
+
+App settings
+
+![2017-08-19 02_22_20-my public folder replacement - dropbox](https://user-images.githubusercontent.com/1207507/29482019-4fba6e54-8489-11e7-88c3-55f3e39c762a.png)
+
+Generating OAuth token
+
 #### Configuring DPFR
 
 * Start by uploading the script to your web host.
