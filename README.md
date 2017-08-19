@@ -2,7 +2,7 @@
 
 Dropbox are [removing support for the Public folder functionality](https://www.dropbox.com/help/files-folders/public-folder).
 
-This is a drop-in replacement for your Dropbox public folder links.
+This is a drop-in script replacement for your Dropbox public folder links.
 
 As Dropbox no longer provides the service, DPFR runs on your web host instead. Files are still fetched in real-time from Dropbox
 using their [API](https://www.dropbox.com/developers/documentation/http/overview).
@@ -18,6 +18,8 @@ Your new links will be sent via your web host and will look like this:
 ```
 https://mysite.com/dropbox/myfile.txt
 ```
+
+Instead of manually generating new Dropbox share links, this enables you to simply change the domain name for your links and be done with it.
 
 ### Requirements
 
@@ -77,13 +79,9 @@ location / {
 }
 ```
 
-#### Generating links
-
-Links are generated in the same manner as 
-
 ### To-do
 
 * Add file cache
 * Nicer error page
 
-Pull requests are welcome.
+Pull requests/issues are welcome.
