@@ -64,19 +64,31 @@ Generating OAuth token
 
 #### Web server: Apache
 
-If you have put the script in a subfolder, please modify the `.htaccess` file. For example:
+You will need the mod_rewrite apache module enabled for this to work.
 
-If your script URL is: 
-
-```
-http://mysite.com/dropbox/
-```
-
-Your `.htaccess` file should read:
+Add the following to your `.htaccess file`:
 
 ```
-ErrorDocument /dropbox/index.php
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+</IfModule>
 ```
+
+Remove or comment out the ErrorDocument line.
+
+If you have put the script in a subfolder you will need to modify the `$urlPath` variable by adding an additional line  immediately below the line that defines this variable in index.php, eg
+
+```
+$urlPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$urlPath = preg_replace( "/^\/my_subfolder/", '', $urlPath);
+```
+
+replace 'my_subfolder' with the name of your folder. 
+
 
 #### Web server: Nginx
 
